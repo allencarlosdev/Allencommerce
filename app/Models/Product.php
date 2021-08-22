@@ -21,7 +21,7 @@ class Product extends Model
 
     //relationship many to many
     public function colors(){
-        return $this->hasMany(Color::class);
+        return $this->belongsToMany(Color::class);
     }
 
     //relationship one to many
