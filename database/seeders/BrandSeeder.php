@@ -13,9 +13,6 @@ class BrandSeeder extends Seeder
      */
     public function run()
     {
-        return [
 
-            'name' => $this->faker->word()
-        ];
     }
 }
