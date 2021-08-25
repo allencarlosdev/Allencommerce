@@ -6,7 +6,7 @@
             </svg>
             <span class="">Categories</span>
         </a>
-        <a href="/" class="mx-6">
+        <a href="/" class="mx-4">
 
             <x-mark-logo class="block h-1"/>
 
