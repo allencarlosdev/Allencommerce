@@ -7,9 +7,12 @@
             <span class="">Categories</span>
         </a>
         <a href="/" class="mx-6">
-            <x-jet-application-mark class="block h-9 w-auto" />
+
+            <x-mark-logo class="block h-1"/>
+
         </a>
 
         @livewire('search')
+
     </div>
 </header>
