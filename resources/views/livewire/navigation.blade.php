@@ -2,6 +2,10 @@
     #navigation-menu {
         height: calc(100vh - 4rem);
     }
+
+    .navigation-link:hover .navigation-submenu {
+        display:block !important;
+    }
 </style>
 <header class="bg-Emerald-900 sticky top-0">
     <div class="container flex items-center h-16">
@@ -84,7 +88,7 @@
             <div class="grid grid-cols-4 h-full relative">
                 <ul class="bg-white">
                     @foreach($categories as $category)
-                        <li class="text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                        <li class="navigation-link text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
                             <a href="" class="py-4 px-8 text-sm flex items-center">
 
                                 <span class="flex justify-center w-9">
@@ -93,33 +97,15 @@
 
                                 {{ $category->name }}
                             </a>
-                            <div class="bg-Red-500 absolute w-3/4 h-full top-0 right-0 hidden">
-
+                            <div class="navigation-submenu bg-white absolute w-3/4 h-full top-0 right-0 hidden">
+                                <x-navigation-subcategories :category="$category"/>
                             </div>
                         </li>
                     @endforeach
                 </ul>
 
-                <div class="col-span-3 bg-Emerald-100">
-                    <div class="grid grid-cols-4 p-4">
-                        <div>
-                            <p class="text-lg font-bold text-center text-Emerald-500 mb-3">Subcategories</p>
-                            <ul>
-                                @foreach($categories->first()->subcategories as $subcategory)
-                                <li class="">
-                                    <a href="" class="text-Emerald-500 text-sm font-semibold inline-block py-1 px-4 hover:text-Red-600">
-                                        {{ $subcategory->name }}
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-
-                        <div class="col-span-3">
-                            <img class="h-64 w-full object-cover object-center"" src="{{ Storage::url($categories->first()->image) }}" alt="">
-                        </div>
-                    </div>
-                    {{-- {{ $category->first() }} --}}
+                <div class="col-span-3 bg-white shadow-lg">
+                    <x-navigation-subcategories :category="$categories->first()"/>
                 </div>
             </div>
         </div>
