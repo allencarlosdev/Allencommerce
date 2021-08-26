@@ -93,7 +93,7 @@
 
                                 {{ $category->name }}
                             </a>
-                            <div class="bg-Red-500 absolute w-3/4 h-full top-0 right-0">
+                            <div class="bg-Red-500 absolute w-3/4 h-full top-0 right-0 hidden">
 
                             </div>
                         </li>
@@ -101,7 +101,25 @@
                 </ul>
 
                 <div class="col-span-3 bg-Emerald-100">
+                    <div class="grid grid-cols-4 p-4">
+                        <div>
+                            <p class="text-lg font-bold text-center text-Emerald-500 mb-3">Subcategories</p>
+                            <ul>
+                                @foreach($categories->first()->subcategories as $subcategory)
+                                <li class="">
+                                    <a href="" class="text-Emerald-500 text-sm font-semibold inline-block py-1 px-4 hover:text-Red-600">
+                                        {{ $subcategory->name }}
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
 
+                        <div class="col-span-3">
+                            <img class="h-64 w-full object-cover object-center"" src="{{ Storage::url($categories->first()->image) }}" alt="">
+                        </div>
+                    </div>
+                    {{-- {{ $category->first() }} --}}
                 </div>
             </div>
         </div>
