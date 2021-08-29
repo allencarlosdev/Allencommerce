@@ -85,7 +85,8 @@
     :class="{'block': open, 'hidden': !open}"
     x-show="open"
     class="bg-Emerald-900 bg-opacity-25 w-full absolute hidden">
-        <div class="container h-full">
+    {{-- Menu desktop --}}
+        <div class="container h-full hidden md:block">
             <div
             x-on:click.away="close()"
             class="grid grid-cols-4 h-full relative">
@@ -111,6 +112,30 @@
                     <x-navigation-subcategories :category="$categories->first()"/>
                 </div>
             </div>
+        </div>
+
+        {{-- menu mobile --}}
+        <div class="bg-white h-full overflow-y-auto">
+
+            <div class="container bg-Emerald-900 bg-opacity-25 py-3 mb-2">
+                @livewire('search')
+            </div>
+
+            <ul>
+                @foreach($categories  as $category)
+                <li class="text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                    <a href="" class="py-4 px-8 text-sm flex items-center">
+
+                        <span class="flex justify-center w-9">
+                            {!! $category->icon !!}
+                        </span>
+
+                        {{ $category->name }}
+                    </a>
+                </li>
+                @endforeach
+            </ul>
+
         </div>
     </nav>
 </header>
