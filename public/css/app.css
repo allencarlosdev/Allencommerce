@@ -1585,6 +1585,9 @@ select {
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
 }
+.bg-opacity-100 {
+	--tw-bg-opacity: 1;
+}
 .object-cover {
 	-o-object-fit: cover;
 	   object-fit: cover;
@@ -1831,6 +1834,10 @@ select {
 .text-Emerald-700 {
 	--tw-text-opacity: 1;
 	color: rgba(4, 120, 87, var(--tw-text-opacity));
+}
+.text-Emerald-900 {
+	--tw-text-opacity: 1;
+	color: rgba(6, 78, 59, var(--tw-text-opacity));
 }
 .text-gray-200 {
 	--tw-text-opacity: 1;
