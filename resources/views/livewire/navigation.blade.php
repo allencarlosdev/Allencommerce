@@ -136,6 +136,49 @@
                 @endforeach
             </ul>
 
+            <p class="text-Emerald-700 px-10 my-4 bg-Emerald-900 bg-opacity-25 py-3">Users</p>
+            @auth
+                <a href="{{ route('profile.show') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+
+                    <span class="flex justify-center w-9">
+                        <i class="fas fa-user-alt"></i>
+                    </span>
+
+                    Profile
+                </a>
+                <a href=""
+                onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit()"
+                class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+
+
+                    <span class="flex justify-center w-9">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+
+                    Log out
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                    @csrf
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+
+                    <span class="flex justify-center w-9">
+                        <i class="fas fa-user-circle"></i>
+                    </span>
+
+                    Login
+                </a>
+                <a href="{{ route('register') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+
+                    <span class="flex justify-center w-9">
+                        <i class="fas fa-user-plus"></i>
+                    </span>
+
+                    Register
+                </a>
+            @endauth
         </div>
     </nav>
 </header>
