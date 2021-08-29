@@ -137,6 +137,9 @@
             </ul>
 
             <p class="text-Emerald-700 px-10 my-4 bg-Emerald-900 bg-opacity-25 py-3">Users</p>
+
+            @livewire('cart-mobile')
+
             @auth
                 <a href="{{ route('profile.show') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
 
