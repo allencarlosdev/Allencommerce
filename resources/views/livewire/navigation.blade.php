@@ -1,4 +1,4 @@
-<header class="bg-Emerald-900 sticky top-0"x-data="dropdown()">
+<header class="bg-Emerald-900 sticky top-0 z-50"x-data="dropdown()">
     <div class="container flex items-center h-16 justify-between md:justify-start">
         <a
             :class="{'bg-opacity-100 text-Emerald-700' : open}"
