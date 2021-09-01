@@ -11,7 +11,7 @@ class CategoryProducts extends Component
     public $products = [];
 
     public function loadPosts(){
-        $this->products= $this->category->products;
+        $this->products= $this->category->products()->where('status', 2)->get();
         $this->emit('glider', $this->category->id);
     }
     public function render()
