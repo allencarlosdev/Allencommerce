@@ -1,9 +1,9 @@
-<header class="bg-Emerald-900 sticky top-0 z-50"x-data="dropdown()">
+<header class="bg-WarmGray-800 sticky top-0 z-50"x-data="dropdown()">
     <div class="container flex items-center h-16 justify-between md:justify-start">
         <a
-            :class="{'bg-opacity-100 text-Emerald-700' : open}"
+            :class="{'bg-WarmGray-100 text-red-500' : open}"
             x-on:click="show()"
-            class="flex flex-col items-center justify-center order-last md:order-first px-6 md:px-4 bg-white bg-opacity-25 text-white cursor-pointer font-semibold h-full">
+            class="flex flex-col items-center justify-center order-last md:order-first px-6 md:px-4 bg-WarmGray-800 text-white hover:text-red-500 hover:bg-WarmGray-100 cursor-pointer font-semibold h-full">
                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                     <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -93,7 +93,7 @@
                 <ul class="bg-white">
                     @foreach($categories as $category)
                         <li class="navigation-link text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
-                            <a href="" class="py-4 px-8 text-sm flex items-center">
+                            <a href="{{ route('categories.show', $category) }}" class="py-4 px-8 text-sm flex items-center">
 
                                 <span class="flex justify-center w-9">
                                     {!! $category->icon !!}
@@ -124,7 +124,7 @@
             <ul>
                 @foreach($categories  as $category)
                 <li class="text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
-                    <a href="" class="py-4 px-8 text-sm flex items-center">
+                    <a href="{{ route('categories.show', $category) }}" class="py-4 px-8 text-sm flex items-center">
 
                         <span class="flex justify-center w-9">
                             {!! $category->icon !!}

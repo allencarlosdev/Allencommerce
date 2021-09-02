@@ -12,10 +12,10 @@
                             <div class="py-4 px-6">
                                 <h1 class="text-lg font-semibold">
                                     <a href="" class="___class_+?5___">
-                                        {{ Str::limit($product->name, 20) }}
+                                        {{ Str::limit($product->name, 14) }}
                                     </a>
                                 </h1>
-                                <p class="font-bold text-Emerald-700">US$ {{ $product->price }}</p>
+                                <p class="bg-red-500 rounded-md font-bold text-white text-center">US$ {{ $product->price }}</p>
                             </div>
                         </article>
                     </li>
