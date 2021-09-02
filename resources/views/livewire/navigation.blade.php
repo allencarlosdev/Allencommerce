@@ -32,7 +32,7 @@
 
                 <x-slot name="content">
                     <!-- Account Management -->
-                    <div class="block px-4 py-2 text-xs text-gray-400">
+                    <div class="block px-4 py-2 text-xs text-Warmgray-800">
                         {{ __('Manage Account') }}
                     </div>
 
@@ -84,15 +84,15 @@
     <nav id="navigation-menu"
     :class="{'block': open, 'hidden': !open}"
     x-show="open"
-    class="bg-Emerald-900 bg-opacity-25 w-full absolute hidden">
+    class="bg-WarmGray-800 bg-opacity-25 w-full absolute hidden">
     {{-- Menu desktop --}}
         <div class="container h-full hidden md:block">
             <div
             x-on:click.away="close()"
             class="grid grid-cols-4 h-full relative">
-                <ul class="bg-white">
+                <ul class="bg-WarmGray-100">
                     @foreach($categories as $category)
-                        <li class="navigation-link text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                        <li class="navigation-link text-WarmGray-800 hover:bg-white hover:text-red-500">
                             <a href="{{ route('categories.show', $category) }}" class="py-4 px-8 text-sm flex items-center">
 
                                 <span class="flex justify-center w-9">
@@ -115,15 +115,15 @@
         </div>
 
         {{-- menu mobile --}}
-        <div class="bg-white h-full overflow-y-auto">
+        <div class="bg-WarmGray-100 h-full overflow-y-auto">
 
-            <div class="container bg-Emerald-900 bg-opacity-25 py-3 mb-2">
+            <div class="container bg-WarmGray-800 bg-opacity-25 py-3 mb-2">
                 @livewire('search')
             </div>
 
             <ul>
                 @foreach($categories  as $category)
-                <li class="text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                <li class="text-WarmGray-800 hover:bg-white hover:text-red-500">
                     <a href="{{ route('categories.show', $category) }}" class="py-4 px-8 text-sm flex items-center">
 
                         <span class="flex justify-center w-9">
@@ -136,12 +136,12 @@
                 @endforeach
             </ul>
 
-            <p class="text-Emerald-700 px-10 my-4 bg-Emerald-900 bg-opacity-25 py-3">Users</p>
+            <p class="text-WarmGray-800 font-semibold px-10 my-4 bg-WarmGray-800 bg-opacity-25 py-3">Users</p>
 
             @livewire('cart-mobile')
 
             @auth
-                <a href="{{ route('profile.show') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                <a href="{{ route('profile.show') }}" class="py-4 px-8 text-sm flex items-center text-WarmGray-800 hover:bg-white hover:text-red-500">
 
                     <span class="flex justify-center w-9">
                         <i class="fas fa-user-alt"></i>
@@ -152,7 +152,7 @@
                 <a href=""
                 onclick="event.preventDefault();
                         document.getElementById('logout-form').submit()"
-                class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                class="py-4 px-8 text-sm flex items-center text-WarmGray-800 hover:bg-white hover:text-red-500">
 
 
                     <span class="flex justify-center w-9">
@@ -165,7 +165,7 @@
                     @csrf
                 </form>
             @else
-                <a href="{{ route('login') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                <a href="{{ route('login') }}" class="py-4 px-8 text-sm flex items-center text-WarmGray-800 hover:bg-white hover:text-red-500">
 
                     <span class="flex justify-center w-9">
                         <i class="fas fa-user-circle"></i>
@@ -173,7 +173,7 @@
 
                     Login
                 </a>
-                <a href="{{ route('register') }}" class="py-4 px-8 text-sm flex items-center text-Emerald-700 hover:bg-Emerald-500 hover:text-white">
+                <a href="{{ route('register') }}" class="py-4 px-8 text-sm flex items-center text-WarmGray-800 hover:bg-white hover:text-red-500">
 
                     <span class="flex justify-center w-9">
                         <i class="fas fa-user-plus"></i>

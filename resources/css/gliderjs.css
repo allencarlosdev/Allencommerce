@@ -68,7 +68,7 @@
     left: -23px;
     top: 30%;
     cursor: pointer;
-    color: #ff0000;
+    color: #ffffff;
     opacity: 1;
     line-height: 1;
     transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67),
@@ -87,7 +87,7 @@
 .glider-next.disabled,
 .glider-prev.disabled {
     opacity: 0.25;
-    color: #ff0000;
+    color: #ffffff;
     cursor: default;
 }
 .glider-hide {
@@ -116,7 +116,7 @@
     background: #ddd;
 }
 .glider-dot.active {
-    background: #ff0000;
+    background: #ef4444;
 }
 @media (max-width: 36em) {
     .glider::-webkit-scrollbar {

@@ -7,7 +7,7 @@
                         {{ $category->name }}
                     </h1>
 
-                    <a href="{{ route('categories.show', $category) }}" class=" text-red-600 hover:text-white hover:cursor-pointer mr-2 font-bold">View more</a>
+                    <a href="{{ route('categories.show', $category) }}" class=" text-white hover:text-red-500 hover:cursor-pointer mr-2 font-bold">View more</a>
                 </div>
                 @livewire('category-products', ['category' => $category])
             </section>

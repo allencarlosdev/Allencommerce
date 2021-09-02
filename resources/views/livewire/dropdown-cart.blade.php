@@ -9,7 +9,7 @@
 
         <x-slot name="content">
             <div class="py-4 px-4">
-                <p class="text-center text-gray-700">
+                <p class="text-center text-WarmGray-800">
                     The cart is empty
                 </p>
             </div>
