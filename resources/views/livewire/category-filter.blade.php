@@ -9,9 +9,9 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         <aside>
-            <div class="bg-WarmGray-800 rounded-md py-6 px-4 mr-4">
+            <div class="bg-WarmGray-800 rounded-md py-6 px-4 sm:mr-4">
 
                 <h2 class="font-semibold text-center mb-4 text-white">Subcategories</h2>
                 <ul class="divide-y divide-WarmGray-100">
@@ -25,7 +25,7 @@
                 </ul>
             </div>
 
-            <div class="bg-WarmGray-800 rounded-md py-6 px-4 mt-4 mr-4">
+            <div class="bg-WarmGray-800 rounded-md py-6 px-4 mt-4 sm:mr-4">
                 <h2 class="font-semibold text-center mb-4 text-white">brands</h2>
                 <ul class="divide-y divide-WarmGray-100">
                 @foreach($category->brands as $brand)
@@ -38,15 +38,15 @@
                 </ul>
             </div>
 
-            <x-jet-button class="mt-4 ml-8" wire:click="cleanUp">
+            <x-jet-button class="mt-4 ml-8 mb-4" wire:click="cleanUp">
                 Delete fitlers
             </x-jet-button>
         </aside>
 
-        <div class="col-span-4">
+        <div class="md:col-span-2 lg:col-span-4">
             @if($view == 'grid')
 
-                <ul class="grid grid-cols-4 gap-4">
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     @foreach($products as $product)
                     <li class="bg-white rounded-lg shadow">
                         <article>
