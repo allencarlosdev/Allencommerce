@@ -56,11 +56,11 @@
 
                             <div class="py-4 px-6">
                                 <h1 class="text-lg font-semibold">
-                                    <a href="" class="___class_+?5___">
+                                    <a href="{{ route('products.show', $product) }}">
                                         {{ Str::limit($product->name, 14) }}
                                     </a>
                                 </h1>
-                                <p class="bg-red-500 rounded-md font-bold text-white text-center">US$ {{ $product->price }}</p>
+                                <a href="{{ route('products.show', $product) }}" class="bg-red-500 rounded-md font-bold text-white text-center">US$ {{ $product->price }}</a>
                             </div>
                         </article>
                     </li>
@@ -70,6 +70,7 @@
             @else
                 <ul class="">
                     @foreach($products as $product)
+                    <a href="{{ route('products.show', $product) }}">
                         <li class="bg-white rounded-lg shadow mb-4">
                             <article class="flex">
                                 <figure class="">
@@ -77,15 +78,16 @@
                                 </figure>
                                 <div class="flex-1 py-4 px-6">
                                     <div class="flex justify-between">
-                                        <div>
-                                            <h1 class="text-lg font-semibold text-WarmGray-800">{{ $product->name }}</h1>
-                                            <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore deleniti beatae quos qui incidunt odit corporis, atque dignissimos illum! Omnis facilis voluptas debitis molestias voluptatibus, est ut sunt, facere aperiam eaque unde cumque ea! Quo!</p>
-                                            <p class="w-36 text-center bg-red-500 rounded-md font-bold text-white mt-4">US$ {{ $product->price }}</p>
+                                            <div>
+                                                <h1 class="text-lg font-semibold text-WarmGray-800">{{ $product->name }}</h1>
+                                                <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore deleniti beatae quos qui incidunt odit corporis, atque dignissimos illum! Omnis facilis voluptas debitis molestias voluptatibus, est ut sunt, facere aperiam eaque unde cumque ea! Quo!</p>
+                                                <a href="{{ route('products.show', $product) }}" class="w-36 text-center bg-red-500 rounded-md font-bold text-white mt-4">US$ {{ $product->price }}</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-                        </li>
+                                </article>
+                            </li>
+                    </a>
                     @endforeach
                 </ul>
             @endif

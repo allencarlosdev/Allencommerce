@@ -1133,9 +1133,6 @@ select {
 .col-span-3 {
 	grid-column: span 3 / span 3;
 }
-.col-span-4 {
-	grid-column: span 4 / span 4;
-}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -1151,10 +1148,6 @@ select {
 .my-4 {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
-.my-2 {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -1231,14 +1224,11 @@ select {
 .mb-2 {
 	margin-bottom: 0.5rem;
 }
-.mr-4 {
-	margin-right: 1rem;
+.ml-8 {
+	margin-left: 2rem;
 }
 .-mt-px {
 	margin-top: -1px;
-}
-.ml-8 {
-	margin-left: 2rem;
 }
 .block {
 	display: block;
@@ -1360,9 +1350,6 @@ select {
 .w-56 {
 	width: 14rem;
 }
-.w-24 {
-	width: 6rem;
-}
 .w-36 {
 	width: 9rem;
 }
@@ -1464,9 +1451,6 @@ select {
 }
 .grid-cols-2 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-5 {
-	grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .flex-col {
 	flex-direction: column;
@@ -1688,10 +1672,6 @@ select {
 .bg-red-500 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(239, 68, 68, var(--tw-bg-opacity));
-}
-.bg-black {
-	--tw-bg-opacity: 1;
-	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25;
@@ -1960,6 +1940,10 @@ select {
 	--tw-text-opacity: 1;
 	color: rgba(245, 245, 244, var(--tw-text-opacity));
 }
+.text-Red-500 {
+	--tw-text-opacity: 1;
+	color: rgba(239, 68, 68, var(--tw-text-opacity));
+}
 .text-red-100 {
 	--tw-text-opacity: 1;
 	color: rgba(254, 226, 226, var(--tw-text-opacity));
@@ -1979,14 +1963,6 @@ select {
 .text-WarmGray-400 {
 	--tw-text-opacity: 1;
 	color: rgba(168, 162, 158, var(--tw-text-opacity));
-}
-.text-black {
-	--tw-text-opacity: 1;
-	color: rgba(0, 0, 0, var(--tw-text-opacity));
-}
-.text-Red-500 {
-	--tw-text-opacity: 1;
-	color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;
@@ -2710,20 +2686,12 @@ select {
 		grid-column: span 4 / span 4;
 	}
 
-	.lg\:mr-4 {
-		margin-right: 1rem;
-	}
-
 	.lg\:grid-cols-5 {
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 
 	.lg\:grid-cols-4 {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-
-	.lg\:gap-4 {
-		gap: 1rem;
 	}
 
 	.lg\:px-8 {
