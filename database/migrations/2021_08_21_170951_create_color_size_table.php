@@ -15,7 +15,7 @@ class CreateColorSizeTable extends Migration
     {
         Schema::create('color_size', function (Blueprint $table) {
             $table->id();
-            $table->integer('quantify');
+            $table->integer('quantity');
             $table->unsignedBigInteger('size_id');
             $table->foreign('size_id')->references('id')->on('sizes');
             $table->unsignedBigInteger('color_id');
