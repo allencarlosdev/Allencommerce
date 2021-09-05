@@ -25,7 +25,7 @@ class Product extends Model
 
     //relationship many to many
     public function colors(){
-        return $this->belongsToMany(Color::class);
+        return $this->belongsToMany(Color::class)->withPivot('quantity');
     }
 
     //relationship one to many
