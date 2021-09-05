@@ -3,4 +3,5 @@
 @import 'tailwindcss/utilities';
 @import 'container.css';
 @import 'nav.css';
-@import 'gliderjs.css'
+@import 'gliderjs.css';
+@import 'form.css';

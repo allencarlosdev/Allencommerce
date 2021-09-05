@@ -28,10 +28,10 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
         {{-- glider script --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.js" integrity="sha512-tHimK/KZS+o34ZpPNOvb/bTHZb6ocWFXCtdGqAlWYUcz+BGHbNbHMKvEHUyFxgJhQcEO87yg5YqaJvyQgAEEtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        {{-- FlexSlider --}}
-        <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}" ></script>
         {{-- jquery --}}
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        {{-- FlexSlider --}}
+        <script src="{{ asset('vendor/FlexSlider/jquery.flexslider-min.js') }}"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
